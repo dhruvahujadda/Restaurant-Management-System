@@ -68,7 +68,7 @@ insert into ORDERS values(1,521,'Spring Roll',3,450,'2023-03-03'),
 
 create table INVENTORY(
 	Stock_Id varchar(5) PRIMARY KEY,
-	Name varchar(30) ,
+	Item_Name varchar(30) ,
 	Quantity varchar(10) ,	
 	Supplier varchar(25) 
 );
@@ -82,7 +82,7 @@ insert into INVENTORY values('A1','Paneer',100,'Asian Dairy'),
 ('A8','Cabbage',60,'Hari Om Veggies');
 
 create table WORKERS (
-	Name varchar(100) ,
+	Employee_Name varchar(100) ,
 	Salary varchar(20) ,	
 	Employee_Id varchar(20) PRIMARY KEY,
 	Post varchar(30),

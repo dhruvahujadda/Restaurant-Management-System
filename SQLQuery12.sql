@@ -47,7 +47,7 @@ create table ORDERS(
 	Name varchar (100),
 	Quantity int,
 	Amount int,
-	Date date
+	Date date,
         FOREIGN KEY (Customer_Id) REFERENCES CUSTOMER(Customer_Id),
         FOREIGN KEY (Name) REFERENCES MENU(Name)
 	);
@@ -132,7 +132,7 @@ INSERT INTO MANAGER Values
 
 create table PAYMENTS(	
 	Order_No int,
-	Payment_Method varchar(25)
+	Payment_Method varchar(25),
 	FOREIGN KEY (Order_No) REFERENCES ORDERS(Order_No)
 );
 INSERT INTO PAYMENTS Values

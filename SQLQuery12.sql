@@ -48,6 +48,8 @@ create table ORDERS(
 	Quantity int,
 	Amount int,
 	Date date
+        FOREIGN KEY (Customer_Id) REFERENCES CUSTOMER(Customer_Id),
+        FOREIGN KEY (Name) REFERENCES MENU(Name)
 	);
 
 insert into ORDERS values(1,521,'Spring Roll',3,450,'2023-03-03'),
@@ -97,7 +99,8 @@ Insert into WORKERS Values('Himesh',15000,'C1','Cook','2021-02-23',999997776688)
 create table TABLES(
 	Table_Number int PRIMARY KEY,
 	No_of_members int ,
-	Customer_Id int
+	FOREIGN KEY (Customer_Id) REFERENCES CUSTOMER(Customer_Id)
+
 );
 INSERT INTO TABLES Values
 (2,5,521),
@@ -129,7 +132,8 @@ INSERT INTO MANAGER Values
 
 create table PAYMENTS(	
 	Order_No int,
-	Payment_Method varchar(25) 
+	Payment_Method varchar(25)
+	FOREIGN KEY (Order_No) REFERENCES ORDERS(Order_No)
 );
 INSERT INTO PAYMENTS Values
 (1,'Cash'),

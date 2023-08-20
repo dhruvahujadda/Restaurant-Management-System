@@ -99,8 +99,8 @@ Insert into WORKERS Values('Himesh',15000,'C1','Cook','2021-02-23',999997776688)
 create table TABLES(
 	Table_Number int PRIMARY KEY,
 	No_of_members int ,
+        Customer_Id int ,
 	FOREIGN KEY (Customer_Id) REFERENCES CUSTOMER(Customer_Id)
-
 );
 INSERT INTO TABLES Values
 (2,5,521),
@@ -120,15 +120,15 @@ create table MANAGER(
 	Manager_Id int PRIMARY KEY,
 	Fname varchar(15) ,
 	Lname varchar(15) ,
-	Contact varchar(20),
+	Contact int,
  	Age int ,
   	Salary int ,
 	Sex char(1) ,
 	Join_Date date 
 );
 INSERT INTO MANAGER Values 
-(1,'Rishi','Rakheja',987654329999,52,30000,'M','2021-02-23'),
-(2,'Seema','Taneja',983213329999,38,30000,'F','2021-02-23')
+(1,'Rishi','Rakheja',987654,52,30000,'M','2021-02-23'),
+(2,'Seema','Taneja',983213,38,30000,'F','2021-02-23');
 
 create table PAYMENTS(	
 	Order_No int,

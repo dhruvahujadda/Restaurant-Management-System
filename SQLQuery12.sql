@@ -74,7 +74,7 @@ create table INVENTORY(
 );
 insert into INVENTORY values('A1','Paneer',100,'Asian Dairy'),
 ('A2','Noodles',50,'Deep Dept store'),
-('A3','Maida',20,'Deep Dept store'),
+('A3','Maida',0,'Deep Dept store'),
 ('A4','Onion',150,'Hari Om Veggies'),
 ('A5','Potato',60,'Hari Om Veggies'),
 ('A6','Rolls',80,'Frozen Rollsey'),
